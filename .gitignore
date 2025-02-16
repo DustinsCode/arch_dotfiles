@@ -12,6 +12,7 @@
 .pki/
 .pulse-cookie
 .shell.pre-oh-my-zsh
+.ssh/
 .steam/
 .steampath
 .steampid
