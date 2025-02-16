@@ -1,0 +1,205 @@
+@import "./rose-pine-moon.css";
+
+/* Global Styles */
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: FiraCode Nerd Font;
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 20px;
+    margin: 0px;
+    padding: 0.5px;
+}
+
+/* Module Styles */
+.module {
+    padding: 0px 10px;
+    margin: 1px 1px;
+}
+
+/* Special Case: Left Margin for First Module in Left Section */
+.modules-left>widget:first-child .module {
+    margin-left: 5px;
+}
+
+/* Special Case: Right Margin for Last Module in Right Section */
+.modules-right>widget:last-child .module {
+    margin-right: 5px;
+}
+
+/* Window Styling */
+window#waybar {
+    background-color: transparent;
+    color: @text;
+    transition: background-color 0.5s;
+}
+
+/* Make window module transparent when no windows present */
+window#waybar.empty #window {
+    background-color: transparent;
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Tooltip styling */
+menu,
+tooltip {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    border: 2px transparent;
+    border-color: @pine;
+    padding: 5px;
+    box-shadow: 0 0 0 1px;
+}
+
+menu label,
+tooltip label {
+    color: @text;
+}
+
+/* Workspaces Button Styling */
+#workspaces button {
+    color: @text;
+    background: transparent;
+    font-weight: bolder;
+    box-shadow: inset 0 -3px transparent;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 0 5px;
+}
+
+#workspaces button.active {
+    color: @text;
+    border-bottom: 2px solid transparent;
+    border-color: @pine;
+    padding: 0 10px;
+}
+
+#workspaces button.focused {
+    background: @base;
+}
+
+#workspaces button.visible {
+    color: @text;
+}
+
+#workspaces button.urgent {
+    background: @love;
+    color: @text;
+    padding: 0 5px;
+}
+
+#workspaces button:hover {
+    background: @base;
+    border: 1px solid transparent;
+    border-color: @pine;
+    padding: 0 5px;
+}
+
+/* Taskbar Button Styling */
+#taskbar button {
+    padding: 0 1px;
+    color: @text;
+}
+
+#taskbar button.active {
+    background: @base;
+    border-bottom: 2px solid transparent;
+    border-radius: 10px;
+    color: @text;
+    border-color: @pine;
+    padding: 0 5px;
+}
+#taskbar button:hover {
+    background: @highlightMed;
+    border: none;
+    padding: 0 5px;
+}
+
+/* Transparent Modules When Empty */
+#taskbar.empty,
+window#waybar.empty {
+    background-color: transparent;
+}
+
+/* Specific Module Styles */
+#backlight,
+#cpu,
+#idle_inhibitor,
+#bluetooth,
+#memory,
+#battery,
+#temperature,
+#custom-updates,
+#clock,
+#privacy,
+#network,
+#wireplumber,
+#keyboard-state,
+#custom-notification,
+#taskbar,
+#user,
+#systemd-failed-units,
+#power,
+#load,
+#jack,
+#cpu-load,
+#image,
+#workspaces {
+    background-color: @base;
+    color: @text;
+}
+
+#power {
+    margin-right: 5px;
+}
+
+#temperature.critical {
+    background-color: @love;
+}
+
+#network.disconnected,
+#wireplumber.muted {
+    color: @love;
+}
+
+/* Focused Label Background */
+label:focus {
+    background-color: @base;
+}
+
+/* Keyboard State Styles */
+#keyboard-state>label {
+    padding: 0 5px;
+}
+
+#keyboard-state>label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Tray Styles */
+#tray {
+    background-color: @base;
+    color: @text;
+}
+
+#tray>.passive {
+    /* -gtk-icon-effect: dim; */
+    color: @text;
+}
+
+#tray>.needs-attention {
+    /* -gtk-icon-effect: highlight; */
+    padding: 0 5px;
+    background-color: @love;
+}
+
+/* Gradient Module Styles */
+#mpd,
+#mpris,
+#window {
+    background: @pine;
+}
