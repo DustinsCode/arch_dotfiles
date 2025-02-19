@@ -50,10 +50,10 @@ menu,
 tooltip {
     background: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
-    border: 2px transparent;
+    border: 1px transparent;
     border-color: @pine;
     padding: 5px;
-    box-shadow: 0 0 0 1px;
+    /*box-shadow: 0 0 0 1px;*/
 }
 
 menu label,
@@ -66,16 +66,16 @@ tooltip label {
     color: @text;
     background: transparent;
     font-weight: bolder;
-    box-shadow: inset 0 -3px transparent;
+    /*box-shadow: inset 0 -3px transparent;*/
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    padding: 0 5px;
+    margin: 1px;
 }
 
 #workspaces button.active {
     color: @text;
-    border-bottom: 2px solid transparent;
-    border-color: @pine;
-    padding: 0 10px;
+    background: @muted;
+    border-bottom: 1px solid transparent;
+    padding: 0 5px;
 }
 
 #workspaces button.focused {
@@ -93,9 +93,7 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background: @base;
-    border: 1px solid transparent;
-    border-color: @pine;
+    background: @muted;
     padding: 0 5px;
 }
 
@@ -103,20 +101,16 @@ tooltip label {
 #taskbar button {
     padding: 0 1px;
     color: @text;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #taskbar button.active {
-    background: @base;
-    border-bottom: 2px solid transparent;
-    border-radius: 10px;
-    color: @text;
-    border-color: @pine;
-    padding: 0 5px;
+    background: @muted;
 }
+
 #taskbar button:hover {
     background: @highlightMed;
     border: none;
-    padding: 0 5px;
 }
 
 /* Transparent Modules When Empty */

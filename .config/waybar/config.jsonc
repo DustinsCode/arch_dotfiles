@@ -372,7 +372,7 @@
         "class<kitty>": " ",
         "class<code>": "󰨞 ",
         "title<.*nvim ~.*>": " ",
-        "title<.*vim.*>": " ",
+        //"title<.*vim.*>": " ",
         "title<.*nvim.*>": " ",
         "title<.*cmus.*>": " ",
         "class<spotify>": " ",
@@ -426,7 +426,7 @@
     "wlr/taskbar": {
       // "format": "{icon}",
       "format": "{icon} {title:.17}",
-      "icon-size": 18,
+      //"icon-size": 18,
       "icon-theme": "BeautyLine",
       "tooltip-format": "{title}",
       "on-click": "activate",
