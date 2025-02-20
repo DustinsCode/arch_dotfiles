@@ -30,4 +30,5 @@ Photos/
 go/
 packages/
 Pictures/
-
+.config/zsh/.zshhistory
+.zcomp*

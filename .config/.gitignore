@@ -21,4 +21,5 @@ user-dirs.dirs
 user-dirs.locale
 yay
 .zcompdump*
-.zsh_history
+zsh/.zsh_history
+
