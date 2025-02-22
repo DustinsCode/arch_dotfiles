@@ -5,12 +5,14 @@
 .cache/
 .cargo/
 .gitconfig
+.gnupg/
 .local/
 .mozilla/
-.npm/
+.npm*/
 .oh-my-zsh/
 .pki/
 .pulse-cookie
+.rustup
 .shell.pre-oh-my-zsh
 .ssh/
 .steam/
@@ -30,5 +32,7 @@ Photos/
 go/
 packages/
 Pictures/
+Projects/
+.config/menus/
 .config/zsh/.zshhistory
 .zcomp*

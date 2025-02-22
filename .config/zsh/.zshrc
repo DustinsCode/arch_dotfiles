@@ -105,3 +105,4 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 
+eval "$(/home/dustycode/.local/bin/mise activate zsh)"
